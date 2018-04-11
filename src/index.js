@@ -1,26 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+const element = React.createElement("h1", null, "Hello element");
+
 class Hello extends React.Component {
   render() {
-    return React.createElement("h1", null, "Hello world");
+    return <h2>Hello world</h2>;
   }
 }
 
 class PureHello extends React.PureComponent {
   render() {
-    return React.createElement("h2", null, "Pure Hello world");
+    return <h3>Pure Hello world</h3>;
   }
 }
 
-const FunHello = () => <h3>Functional Hello World</h3>;
+const FunHello = () => <h4>Functional Hello World</h4>;
 
 const App = () => (
-  <div>
+  <React.Fragment>
+    {element}
     <Hello />
     <PureHello />
     <FunHello />
-  </div>
+  </React.Fragment>
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));
