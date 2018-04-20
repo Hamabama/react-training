@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import './style.css';
 
 const element = React.createElement("h1", null, "Hello element");
 
