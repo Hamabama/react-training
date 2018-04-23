@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest",
     "server": "node server.js",
-    "build-prod": "webpack -p",
-    "build-dev": "webpack --mode development",
-    "watch": "webpack-dev-server --mode development"
+    "build-prod": "set NODE_ENV=production && webpack -p",
+    "build-dev": "set NODE_ENV=development && webpack --mode development",
+    "watch": "set NODE_ENV=development && webpack-dev-server --mode development"
   },
   "author": "",
   "license": "ISC",
